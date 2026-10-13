@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // GitHub Pages SPA fallback: restore deep links after redirect to index.
+      sessionStorage.setItem(
+        "kalimates:redirect",
+        location.pathname + location.search + location.hash,
+      );
+      location.replace(
+        location.pathname.endsWith("/")
+          ? location.pathname
+          : location.pathname.replace(/\/[^/]*$/, "/") || "/",
+      );
+    </script>
+    <meta http-equiv="refresh" content="0;URL='/'" />
+    <title>Kalimates Private Limited</title>
+  </head>
+  <body></body>
+</html>
